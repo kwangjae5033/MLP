@@ -6,7 +6,7 @@
 
 int main()
 {
-    
+    //28x28 pixels, 512 hidden neurons, 0-9 signal 
     int nInputUnit      = 784;
     int nHiddenUnit     = 512;
     int nOutputUnit     = 10;
@@ -29,6 +29,7 @@ int main()
         inputTraining[i]			= new float[nInputUnit];
         desiredOutputTraining[i]	= new float[nOutputUnit];
     }
+    
     float **inputTest			= new float*[nTestSet];
     float **desiredOutputTest	= new float*[nTestSet];
     
@@ -105,7 +106,7 @@ int main()
     cout<<"time: "<<elapsed_time<<" sec"<<endl;
 
     
-    // Test Set Result
+    // Training Set Result
     cout<<"[Result]"<<endl<<endl;
 
     int sums=0;
